@@ -15,7 +15,7 @@ def get_user(token_key):
         return User.objects.get(pk=user_id)
     except Exception as e:
         return AnonymousUser
-    
+
 
 class TokenAuthMiddleware(BaseMiddleware):
     def __init__(self, inner):

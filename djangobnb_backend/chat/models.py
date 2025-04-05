@@ -19,5 +19,3 @@ class ConversationMessage(models.Model):
     sent_to = models.ForeignKey(User, related_name='received_messages', on_delete=models.CASCADE)
     created_by = models.ForeignKey(User, related_name='sent_messages', on_delete=models.CASCADE)
     created_at = models.DateTimeField(auto_now_add=True)
-
-
